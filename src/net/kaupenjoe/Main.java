@@ -2,23 +2,34 @@ package net.kaupenjoe;
 
 public class Main {
     public static void main(String[] args) {
-        /* Errors and how to get help with them */
+        /* Integers, Math and Arithmetic Operators  */
 
-        // Uncomment the lines to see examples of some of these errors!
+        int x = 100;
+        int y = 20;
 
-        // java: cannot find symbol
-        // "Something is red inside the Code"
-        // System.out.println(a231);
+        // Addition
+        int result = x + y;
+        System.out.println(result);
 
-        // Exception in thread "main" java.lang.NullPointerException
-        // Something is null (doesn't have a value)
-        String s = null;
-        // System.out.println(s.length());
+        // Subtraction
+        result = x - y;
+        System.out.println(result);
 
+        // Multiplication
+        result = x * y;
+        System.out.println(result);
 
-        // Process finished with exit code 1
-        // "finished with non-zero exit value 1"
-        // NEVER only post this. This shows everyone you don't know programming or Java
-        // Usually there should be an error log/output or an "Exception"
+        // Division
+        result = x / y;
+        System.out.println(result);
+
+        // Remainder
+        result = 20 % 2;
+        System.out.println(result);
+
+        // Math Methods
+        System.out.println("------");
+        System.out.println(Math.max(x, y));
+        System.out.println(Math.abs(-500)); // |-500| = 500
     }
 }
