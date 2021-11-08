@@ -2,28 +2,22 @@ package net.kaupenjoe;
 
 public class Main {
     public static void main(String[] args) {
-        /* BOOLEAN AND COMPARISON OPERATORS  */
+        /* BOOLEAN AND LOGICAL OPERATORS */
 
         boolean likedThisVideo = true;
         boolean commented = true;
+        boolean dislikedThisVideo = false;
 
-        System.out.println("You have liked this video " + likedThisVideo);
-        System.out.println("You have commented on this video " + commented);
+        // Logical Operators
+        // && (AND)
+        // || (OR)
+        // !  (NOT / NEGATION)
 
-        // Comparison Operators
-        // > >= == != < <=
+        boolean superFan = likedThisVideo && commented; // FALSE, because commented is NOT True
+        boolean fan = likedThisVideo || commented; // True, because ONE of them is true
+        boolean hater = !fan; // TRUE, because we negate superFan
+        boolean superHater = hater && dislikedThisVideo;
 
-        int yourScore = 98;
-
-        boolean passedClass = yourScore >= 50; // true, because 98 >= 50
-        System.out.println("You passed: " + passedClass + " with " + yourScore + " points!");
-
-        boolean hasPerfectScore = yourScore == 100; // false, because 98 is NOT equal to 100
-        System.out.println("You have a perfect score? " + hasPerfectScore);
-
-        boolean failedClass = passedClass == false;
-        failedClass = !passedClass; // Negating a variable with the exclamation mark
-        // true -> false
-        // false -> true
+        superHater = !(likedThisVideo || commented) && dislikedThisVideo;
     }
 }
