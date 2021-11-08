@@ -1,23 +1,36 @@
 package net.kaupenjoe;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        /* BOOLEAN AND LOGICAL OPERATORS */
+        /* IF AND ELSE STATEMENTS  */
 
-        boolean likedThisVideo = true;
-        boolean commented = true;
-        boolean dislikedThisVideo = false;
+        int exam1 = 65;
+        int exam2 = 51;
 
-        // Logical Operators
-        // && (AND)
-        // || (OR)
-        // !  (NOT / NEGATION)
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Results for Exam 1: ");
+        exam1 = scanner.nextInt();
+        System.out.println("Results for Exam 2: ");
+        exam2 = scanner.nextInt();
+        
+        if(exam1 >= 50) {
+            System.out.println("You have passed exam 1");
+        } else {
+            System.out.println("You have FAILED exam 1");
+        }
 
-        boolean superFan = likedThisVideo && commented; // FALSE, because commented is NOT True
-        boolean fan = likedThisVideo || commented; // True, because ONE of them is true
-        boolean hater = !fan; // TRUE, because we negate superFan
-        boolean superHater = hater && dislikedThisVideo;
+        if(exam2 >= 50) {
+            System.out.println("You have passed exam 2");
+        } else if(exam2 < 0) {
+            System.out.println("How did you get negative points?!");
+        } else {
+            System.out.println("You have FAILED exam 2");
+        }
 
-        superHater = !(likedThisVideo || commented) && dislikedThisVideo;
+        if(exam1 >= 50 && exam2 >= 50) {
+            System.out.println("You have passed BOTH exams!");
+        }
     }
 }
