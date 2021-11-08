@@ -2,29 +2,28 @@ package net.kaupenjoe;
 
 public class Main {
     public static void main(String[] args) {
-        /* Assignment Operators  */
+        /* BOOLEAN AND COMPARISON OPERATORS  */
 
-        int x = 100;
-        int y = 20;
+        boolean likedThisVideo = true;
+        boolean commented = true;
 
-        x += y;
-        System.out.println(x);
-        x -= y;
-        System.out.println(x);
-        x *= y;
-        System.out.println(x);
-        x /= y;
-        System.out.println(x);
-        x %= y;
-        System.out.println(x);
+        System.out.println("You have liked this video " + likedThisVideo);
+        System.out.println("You have commented on this video " + commented);
 
-        x = x + 1;
-        x += 1;
-        x++;
-        System.out.println(x);
+        // Comparison Operators
+        // > >= == != < <=
 
-        x--;
-        System.out.println(x);
+        int yourScore = 98;
 
+        boolean passedClass = yourScore >= 50; // true, because 98 >= 50
+        System.out.println("You passed: " + passedClass + " with " + yourScore + " points!");
+
+        boolean hasPerfectScore = yourScore == 100; // false, because 98 is NOT equal to 100
+        System.out.println("You have a perfect score? " + hasPerfectScore);
+
+        boolean failedClass = passedClass == false;
+        failedClass = !passedClass; // Negating a variable with the exclamation mark
+        // true -> false
+        // false -> true
     }
 }
