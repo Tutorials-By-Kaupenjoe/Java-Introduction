@@ -2,41 +2,15 @@ package net.kaupenjoe;
 
 public class Main {
     public static void main(String[] args) {
-        /* STRINGS AND STRING-METHODS */
+        /* CASTING (or converting data types between each other)  */
 
-        String sentence = "It's a wonderful Java Series!";
-        System.out.println(sentence);
-        System.out.println("Length is: " + "-" + sentence.length());
+        int loan = 750;
+        float interestRate = 0.0525f;
 
-        // Upper and lower case
-        System.out.println("Shouting: " + sentence.toUpperCase());
-        System.out.println("Whispering: " + sentence.toLowerCase());
-        System.out.println(sentence);
+        float interest = loan * interestRate;
+        System.out.println(interest);
 
-        // indexOf
-        System.out.println("The word 'Java' is found at position: " + sentence.indexOf("Java"));
-
-        // Replace
-        System.out.println(sentence.replace("Java", "C#"));
-
-        String s = "";
-        boolean empty = s.isEmpty();
-        System.out.println(empty);
-
-        // startsWith and endsWith
-        System.out.println(sentence.startsWith("I"));
-        System.out.println(sentence.endsWith("A"));
-
-        // contains
-        System.out.println(sentence.contains("Java")); //true
-
-        // charAt
-        System.out.println(sentence.charAt(17));
-
-        // substring
-        s = sentence.substring(17);
-        System.out.println(s);
-
-
+        float x = (int)50.5f + 20.6f;
+        System.out.println(x);
     }
 }
