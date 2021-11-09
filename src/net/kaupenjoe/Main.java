@@ -2,15 +2,19 @@ package net.kaupenjoe;
 
 public class Main {
     public static void main(String[] args) {
-        /* CASTING (or converting data types between each other)  */
+        /* TERNARY OPERATOR */
 
-        int loan = 750;
-        float interestRate = 0.0525f;
+        int exam = 65;
+        int gift = 0;
 
-        float interest = loan * interestRate;
-        System.out.println(interest);
+        if(exam >= 50) {
+            gift = 10;
+        } else {
+            gift = 0;
+        }
+        System.out.println(gift);
 
-        float x = (int)50.5f + 20.6f;
-        System.out.println(x);
+        gift = (exam >= 50) ? 10 : 0;
+        System.out.println(gift);
     }
 }
