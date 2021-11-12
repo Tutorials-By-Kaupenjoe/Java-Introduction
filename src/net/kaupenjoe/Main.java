@@ -1,16 +1,10 @@
 package net.kaupenjoe;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        /* ARRAYS */
-
-        String question1 = "How many States does the USA have?";
-        String question2 = "What is the Capital of the United Kingdom";
-        String question3 = "What is the chemical symbol for Iron";
-
-        String answer1 = "50";
-        String answer2 = "London";
-        String answer3 = "Fe";
+        /* LOOPS */
 
         String[] questions = new String[3];
         questions[0] = "How many States does the USA have?";
@@ -22,17 +16,30 @@ public class Main {
         answers[1] = "London";
         answers[2] = "Fe";
 
-        System.out.println(questions[0]);
-        System.out.println(answers[0]);
+        for(int i = 0; i < 100; i++) {
+            System.out.println(i);
+        }
 
-        questions[0] = "How old is Ewan McGregor (in 2021)?";
-        System.out.println(questions[0]);
-        System.out.println(answers[0]);
+        for(int i = 0; i < questions.length; i++) {
+            System.out.println(questions[i]);
+            System.out.println(answers[i]);
+        }
 
-        System.out.println(questions.length);
+        // foreach
+        for(String question : questions) {
+            System.out.println(question);
+        }
 
-        // ArrayIndexOutOfBoundsException (Uncomment line below)
-        // System.out.println(questions[3]);
+        Scanner scanner = new Scanner(System.in);
 
+        // while loop AND this is endless!
+        while(true) {
+            System.out.println("Do you want to continue?");
+            if(scanner.next().toLowerCase().equals("yes")) {
+                continue;
+            } else {
+                break;
+            }
+        }
     }
 }
