@@ -3,8 +3,17 @@ package net.kaupenjoe;
 public class Dog {
     // Adding some fields to the Dog Class
     public String picture;
-    public String name;
-    public int age;
+    protected String name;
+    private int age;
+    public static final int dogToHumanYearMultiplier = 7;
+
+    // public, protected, private
+    // static, final
+
+    // getter
+    public int getAge() {
+        return age;
+    }
 
     // Default Constructor
     public Dog() {
@@ -20,6 +29,19 @@ public class Dog {
 
     public void woof() {
         System.out.println(this.name +  " just woofed!");
+    }
+
+    public void birthday() {
+        this.age++;
+    }
+
+    public int getAgeInHumanYears() {
+        return this.age * Dog.dogToHumanYearMultiplier;
+    }
+
+    public static void outputDog(Dog dog) {
+        System.out.println(dog.name);
+        System.out.println(dog.age);
     }
 
 }

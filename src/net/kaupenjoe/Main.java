@@ -2,7 +2,7 @@ package net.kaupenjoe;
 
 public class Main {
     public static void main(String[] args) {
-        /* Classes and Objects */
+        /* Access Modifiers */
 
         // Using the "default Constructor"
         Dog doggo = new Dog();
@@ -10,17 +10,15 @@ public class Main {
 
         Dog bengie = new Dog("bengie.png", "Bengie", 7);
         System.out.println(bengie.name);
-        System.out.println(bengie.age);
+        System.out.println(bengie.getAge());
 
         Dog gracie = new Dog("gracie.png", "Gracie", 5);
-        System.out.println(gracie.name);
-        System.out.println(gracie.age);
+        Dog.outputDog(gracie);
 
         bengie.woof();
         gracie.woof();
 
-        bengie.age = 10;
-        System.out.println(bengie.age);
+        System.out.println(bengie.getAgeInHumanYears());
 
 
     }
