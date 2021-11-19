@@ -1,25 +1,31 @@
 package net.kaupenjoe;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        /* Access Modifiers */
-
-        // Using the "default Constructor"
-        Dog doggo = new Dog();
-        System.out.println(doggo.name);
+        /* Inheritance */
 
         Dog bengie = new Dog("bengie.png", "Bengie", 7);
-        System.out.println(bengie.name);
-        System.out.println(bengie.getAge());
-
         Dog gracie = new Dog("gracie.png", "Gracie", 5);
-        Dog.outputDog(gracie);
 
-        bengie.woof();
-        gracie.woof();
+        Cat whiskers = new Cat("whiskers.png", "whiskers", 4);
 
-        System.out.println(bengie.getAgeInHumanYears());
+        // bengie.woof();
+        // gracie.woof();
 
+        System.out.println(bengie.getAge());
+        whiskers.makeNoise();
+        bengie.makeNoise();
 
+        List<Animal> animals = new ArrayList<>();
+        animals.add(bengie);
+        animals.add(gracie);
+        animals.add(whiskers);
+
+        for(Animal animal : animals) {
+            animal.makeNoise();
+        }
     }
 }

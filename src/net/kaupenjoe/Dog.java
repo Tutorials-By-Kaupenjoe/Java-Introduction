@@ -1,38 +1,11 @@
 package net.kaupenjoe;
 
-public class Dog {
-    // Adding some fields to the Dog Class
-    public String picture;
-    protected String name;
-    private int age;
+public class Dog extends Animal {
     public static final int dogToHumanYearMultiplier = 7;
-
-    // public, protected, private
-    // static, final
-
-    // getter
-    public int getAge() {
-        return age;
-    }
-
-    // Default Constructor
-    public Dog() {
-
-    }
 
     // To create a new Object we need a Custom Constructor
     public Dog(String picture, String name, int age) {
-        this.picture = picture;
-        this.name = name;
-        this.age = age;
-    }
-
-    public void woof() {
-        System.out.println(this.name +  " just woofed!");
-    }
-
-    public void birthday() {
-        this.age++;
+        super(picture, name, age);
     }
 
     public int getAgeInHumanYears() {
@@ -44,4 +17,8 @@ public class Dog {
         System.out.println(dog.age);
     }
 
+    @Override
+    public void makeNoise() {
+        System.out.println(this.name + " just woofed!");
+    }
 }
