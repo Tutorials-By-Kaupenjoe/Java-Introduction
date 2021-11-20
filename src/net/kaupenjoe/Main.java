@@ -10,22 +10,21 @@ public class Main {
         Dog bengie = new Dog("bengie.png", "Bengie", 7);
         Dog gracie = new Dog("gracie.png", "Gracie", 5);
 
-        Cat whiskers = new Cat("whiskers.png", "whiskers", 4);
+        bengie.birthday();
 
-        // bengie.woof();
-        // gracie.woof();
+        Cat whiskers = new Cat("whiskers.png", "Whiskers", 4);
 
-        System.out.println(bengie.getAge());
-        whiskers.makeNoise();
-        bengie.makeNoise();
+        bengie.makeSound();
+        whiskers.makeSound();
 
         List<Animal> animals = new ArrayList<>();
         animals.add(bengie);
         animals.add(gracie);
         animals.add(whiskers);
 
-        for(Animal animal : animals) {
-            animal.makeNoise();
-        }
+        animals.get(1).makeSound();
+
+        Animal animal = new Dog("jenny.png", "Jenny", 12);
+        animal.makeSound();
     }
 }

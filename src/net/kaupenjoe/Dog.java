@@ -3,7 +3,6 @@ package net.kaupenjoe;
 public class Dog extends Animal {
     public static final int dogToHumanYearMultiplier = 7;
 
-    // To create a new Object we need a Custom Constructor
     public Dog(String picture, String name, int age) {
         super(picture, name, age);
     }
@@ -18,7 +17,7 @@ public class Dog extends Animal {
     }
 
     @Override
-    public void makeNoise() {
+    public void makeSound() {
         System.out.println(this.name + " just woofed!");
     }
 }
