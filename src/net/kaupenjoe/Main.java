@@ -1,45 +1,47 @@
 package net.kaupenjoe;
 
-import java.util.ArrayList;
-import java.util.List;
+import net.kaupenjoe.banking.Bank;
+import net.kaupenjoe.banking.Person;
+import net.kaupenjoe.trivia.TriviaGame;
 
 public class Main {
     public static void main(String[] args) {
-        /* INTERFACES AND ABSTRACT */
+        /*
+         * Exercise 3:
+         * a) Trivia Game with CLASSES and Objects:
+         * Modify the Trivia Game we have made in the previous two exercises in such a way to use Classes as well.
+         * Imagine possible making custom classes for Question Answer Pairs, using Lists to save them
+         *
+         * b) Bank Management System:
+         * Create a Bank Management System which has the following components:
+         * Person (which saves first, middle and last name, age and a "social security number")
+         * Bank (which saves a List of customers and their Checking Accounts, maximum overdraw amount)
+         * Checking Account (should have a current value, methods for taking and depositing money)
+         * Opening a Checking Account should only work via a Bank and must require a certain amount of initial deposit.
+         *
+         * BONUS: Make the Banking System Interactive (No Solution provided!)
+         *
+         *
+         */
 
-        Dog bengie = new Dog("bengie.png", "Bengie", 7);
-        Dog gracie = new Dog("gracie.png", "Gracie", 5);
+        Person nano = new Person("Nano", "Attack", 8);
+        Person daniel = new Person("Daniel", "Smith", 24);
+        Person marie = new Person("Marie", "Susan", "Jones", 28);
 
-        bengie.birthday();
+        Bank kb = new Bank("KaupenBank");
+        kb.openBankAccount(nano, 200); // Not old Enough
 
-        Cat whiskers = new Cat("whiskers.png", "Whiskers", 4);
+        kb.openBankAccount(marie, 2000);
+        kb.openBankAccount(daniel, 10); // Deposit is not enough
 
-        bengie.makeSound();
-        whiskers.makeSound();
+        System.out.println(kb.getAccountByPerson(marie).getBalance()); // 2000
+        kb.withdrawAmount(3000, marie); // Cannot withdraw over the limit!
 
-        List<Animal> animals = new ArrayList<>();
-        animals.add(bengie);
-        animals.add(gracie);
-        animals.add(whiskers);
 
-        animals.get(1).makeSound();
 
-        Animal animal = new Dog("jenny.png", "Jenny", 12);
-        animal.makeSound();
-
-        // Animal animal1 = new Animal();
-
-        List<IPettable> pets = new ArrayList<>();
-        pets.add(bengie);
-        pets.add(whiskers);
-        pets.add(new Bird("yoshi.png", "Yoshi", 12));
-
-        for(IPettable pet : pets) {
-            pet.pet();
-        }
-
-        // IFly flying = (IFly)whiskers;
-        // flying.fly();
+        // Uncomment both to play game!
+        // TriviaGame game = new TriviaGame();
+        // game.startGame();
 
     }
 }
