@@ -11,15 +11,11 @@ public class Animal {
         this.age = age;
     }
 
-    public int getAge() {
-        return age;
-    }
-
     public void birthday() {
         this.age++;
     }
 
-    public void makeNoise() {
-        System.out.println(this.name + " made a noise!");
+    public void makeSound() {
+        System.out.println(this.name + " just made a sound");
     }
 }
